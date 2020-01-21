@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPS API Project</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+    <div class="container">
+        <h1>National Park Search</h1>
+        <form>
+            <label class="question-label">What state do you want to search in?</label>
+            <input type="text" name="text-input" id="text-input" placeholder="e.g. WY">
+            <label class="results-limit-label">Limit results to?</label>
+            <input type="text" name="results-limit" id="results-limit" value="10" placeholder="e.g. 15">
+            <input type="button" class="button-input" value="Search">
+        </form>
+        <section class="results hidden">
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
