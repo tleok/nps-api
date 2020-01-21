@@ -3,22 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NPS API Project</title>
-    <link href="index.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NPS API Search</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="index.css">
 </head>
+<body>
     <div class="container">
-        <h1>National Park Search</h1>
-        <form>
-            <label class="question-label">What state do you want to search in?</label>
-            <input type="text" name="text-input" id="text-input" placeholder="e.g. WY">
-            <label class="results-limit-label">Limit results to?</label>
-            <input type="text" name="results-limit" id="results-limit" value="10" placeholder="e.g. 15">
-            <input type="button" class="button-input" value="Search">
+        <h1>NPS Search</h1>
+
+        <form id="js-form">
+            <label for="search-term">Which State do you want to search?</label>
+            <input type="text" name="search-term" id="js-search-term" required placeholder=" e.g., AZ, WY(2 letter code)">
+
+            <label for="max-results">Maximum results to return</label>
+            <input type="number" name="max-results" id="js-max-results" value="10">
+
+            <input type="submit" value="Search!">
         </form>
-        <section class="results hidden">
+
+        <p id="js-error-message" class="error-message"></p>
+        <section id="results" class="hidden">
+          <h2>Search results</h2>
+          <ul id="results-list">
+          </ul>
         </section>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
 </html>
